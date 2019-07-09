@@ -1,0 +1,12 @@
+package problem2;
+
+public class Apartment {
+	private String id;
+	private double rent;
+	
+	public Apartment() {
+		
+	}
+	
+	
+}

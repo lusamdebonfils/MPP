@@ -1,0 +1,89 @@
+package business;
+
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+
+import dataaccess.DataAccess;
+import dataaccess.DataAccessFacade;
+import exception.UserException;
+
+public class Main {
+	
+	public Main() {
+		SystemController controller = new SystemController();
+		Scanner input = new Scanner(System.in);
+		try {
+			/*
+			System.out.println("Testing for user before Login : "+ controller.currentUserType);
+			DataAccessFacade.loadUserMap(testUsers);
+			System.out.println("Enter both user name and password to authenticate");
+			System.out.print("UserID : ");
+			String uid = input.next();
+			System.out.println("password : ");
+			String pwd = input.next();
+			controller.login(uid, pwd);
+			System.out.println("Testing for user After Login : "+ controller.currentUserType);
+			*/
+			/*
+			DataAccessFacade.loadMembersMap(listOfMembers);
+			LibraryMember bula = new LibraryMember("Brian", "Musoyisoyi", "077826622", "6183636");
+			Address bulaAddress = new Address("Mbarara", "Kampala", "Main Street", "256");
+			controller.addLibMember(bula.getFirstName(), bula.getLastName(), bula.getPhone(),
+					bula.getMemeberID(), bulaAddress.getStreet(), bulaAddress.getCity(), bulaAddress.getState(), bulaAddress.getZipCode());
+			
+			controller.getMemberIDs().forEach((e)->{
+				System.out.println(e);
+			});
+			controller.getMembers().forEach((e)->{
+				System.out.println(e.getFirstName());
+			});
+			*/
+			DataAccessFacade.loadBooksMap(books);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	List<User> testUsers = Arrays.asList(
+			new User("lusam","Luswata Samuel" ,"12345", UserType.ADMIN),
+			new User("niyo","Niyoshuti Moses" ,"12345", UserType.LIBRARAIN),
+			new User("zebro","Zinash Negga Zebro" ,"12345", UserType.LIBRARAIN),
+			new User("kedi","Kedi Emmanuel" ,"12345", UserType.BOTH));
+	
+	List<LibraryMember> listOfMembers = new ArrayList<>(Arrays.asList(
+			new LibraryMember("Samuel", "Luswata", "0752816800", "610096"),
+			new LibraryMember("Zinash", "Negga", "0773927100", "610095"),
+			new LibraryMember("Kedi", "Edgar", "0776621606", "610132"),
+			new LibraryMember("Niyonshuti", "Moses", "0782242462", "108886")
+			));
+	
+
+	 Book b1 = new Book("HSUWYET3638", "Intro To JAVA", 21);
+	 Book b2 = new Book("JU274DHFY44", "Intro To ALGO", 7);
+	 Book b3 = new Book("DBVUDU38WNF", "Intro To DS", 21);
+	 Book b4 = new Book("BVYDHEY37DB", "Intro To SOFTWARE", 7);
+	 Book b5 = new Book("E03DBFYEJND", "Intro To PROGRAMMING", 21);
+	 Book b6 = new Book("DGEEICNIENBD", "Intro To MPP", 7);
+	 List <Book> books = Arrays.asList(b1, b2, b3, b4, b5);
+	 
+	public static void main(String[] args) {
+		new Main();
+	}
+	
+	
+
+}

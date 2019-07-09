@@ -1,0 +1,10 @@
+package problem1;
+
+public class Project {
+	private boolean isCompleted;
+	private int projectId;
+	private String projectName;
+	
+
+	
+}

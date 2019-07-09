@@ -1,0 +1,12 @@
+package problem3A;
+
+public class Cylinder extends Circle {
+	private double height = 1.0;
+	
+	public Cylinder() {
+		
+	}
+	public Cylinder(double radius) {
+		
+	}
+}

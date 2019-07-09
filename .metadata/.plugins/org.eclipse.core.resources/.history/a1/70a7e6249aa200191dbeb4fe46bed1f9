@@ -1,0 +1,9 @@
+package com.addis;
+
+public class DC {
+
+	public DC() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

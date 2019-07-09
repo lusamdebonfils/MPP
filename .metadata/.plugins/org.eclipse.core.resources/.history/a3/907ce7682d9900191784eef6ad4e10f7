@@ -1,0 +1,32 @@
+package problem2.prob2B;
+
+import java.util.HashMap;
+
+
+public class Order {
+	
+	private int orderNum;
+	private HashMap<String, Double> existingOrderLines;
+
+	public Order(int orderNum) {
+		this.orderNum = orderNum;
+		this.existingOrderLines = new HashMap<>();;
+	}
+	
+	public void addOrderLine(String name, Double basePrice) {
+		existingOrderLines.put(name, basePrice);
+	}
+	
+	public void addOrderLineItem(String name, Integer quantity) {
+		if(existingOrderLines.containsKey(name)) {
+			//OrderLine ord = new OrderLine(this,name,basePrice);
+		}
+	}
+
+	public void getTotalCost() {
+		double total = 0;
+		
+	}
+	
+	
+}

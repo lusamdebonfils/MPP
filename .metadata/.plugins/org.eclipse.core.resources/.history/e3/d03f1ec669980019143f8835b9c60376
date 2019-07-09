@@ -1,0 +1,31 @@
+package problem1;
+
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
+
+public class ProjectManager {
+	
+	private String name;
+	private String id;
+	private Map<Developer, Integer> progress;
+	
+	public ProjectManager(String id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+	
+	private LocalDate getCurrentDate() {
+		return LocalDate.now();
+		
+	}
+	
+	public void getProgressReport() {
+		
+	}
+	
+//	private getReport() {
+//		
+//	}
+
+}

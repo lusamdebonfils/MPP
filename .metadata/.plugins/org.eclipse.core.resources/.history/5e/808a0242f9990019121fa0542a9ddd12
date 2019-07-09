@@ -1,0 +1,22 @@
+package problem2;
+
+public class Main {
+
+	public static void main(String[] args) {
+		LandLord landLord1 = new LandLord("Samuel Luswata");
+		
+		Building b140 = new Building("Building 140", landLord1);
+		Building b141 = new Building("Building 141", landLord1);
+		Building b142 = new Building("Building 142", landLord1);
+		Building b143 = new Building("Building 143", landLord1);
+		
+		Apartment b140_001 = new Apartment("001",b140,1000);
+		Apartment b140_002 = new Apartment("002",b140,1000);
+		Apartment b140_003 = new Apartment("003",b140,1000);
+		Apartment b140_004 = new Apartment("004",b140,1000);
+		
+		
+
+	}
+
+}

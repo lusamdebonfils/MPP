@@ -1,0 +1,29 @@
+package problem2.prob2B;
+
+import java.util.HashMap;
+
+public class OrderLine {
+	
+	private Order order;
+	private HashMap<String,Double> props;
+	
+	public OrderLine(Order order) {
+		this.order = order;
+		props = new HashMap<>();
+	}
+	
+	public Double getBasePrice(String key) {
+		return props.get(key);
+	}
+	public String getOrderLineName(String key) {
+		return props.get(key);
+	}
+	public void setOrderLineProps(String name, Double price) {
+		props.put(name, price);
+	}
+
+	
+	
+	
+	
+}

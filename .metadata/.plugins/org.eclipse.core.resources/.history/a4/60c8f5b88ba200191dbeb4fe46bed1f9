@@ -1,0 +1,27 @@
+package prob2;
+
+public final class Ellipse implements ClosedCurve {
+	private double semiMinorAxis;
+	private double semiMajorrAxis;
+	
+	public Ellipse(double a, double b) {
+		setSemiMinorAxis(a);
+		semiMajorrAxis = b;
+	}
+
+	@Override
+	public double computePerimeter() {
+		return 0;
+	}
+
+	public double getSemiMinorAxis() {
+		return semiMinorAxis;
+	}
+
+	public void setSemiMinorAxis(double semiMinorAxis) {
+		this.semiMinorAxis = semiMinorAxis;
+	}
+	
+	
+
+}

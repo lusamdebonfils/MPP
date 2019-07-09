@@ -1,0 +1,8 @@
+package dataaccess;
+
+import business.LibraryMember;
+import dataaccess.DataAccessFacade.StorageType;
+
+public interface DataAccess {
+	 Object readFromStorage(StorageType type);
+}

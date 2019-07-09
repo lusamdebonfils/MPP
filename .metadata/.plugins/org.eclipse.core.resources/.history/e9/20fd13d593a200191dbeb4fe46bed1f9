@@ -1,0 +1,5 @@
+The equals() method in the super class(Object) wasnot Overridden
+
+public boolean equals(Employee e) {
+	return e.name.equals(name) && e.salary == salary;
+}

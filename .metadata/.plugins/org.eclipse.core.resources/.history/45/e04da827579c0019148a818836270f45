@@ -1,0 +1,7 @@
+package prob4.prob4.personbirthinfo;
+
+public interface PersonInformation {
+	public Person getPerson();
+	public BirthInfo getDateOfBirth();
+	public void printPersonInformation();
+}

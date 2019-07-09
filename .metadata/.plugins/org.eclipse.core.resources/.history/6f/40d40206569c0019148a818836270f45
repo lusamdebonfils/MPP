@@ -1,0 +1,19 @@
+package problem5_3;
+
+public class VehicleFactory {
+
+	private VehicleFactory() {}
+	
+	public static Vehicle getVehicle(String v) {
+
+		Vehicle vehicle = null;
+		try {
+			Class<?> cl = Class.forName("problem5_3." + v);
+			vehicle = (Vehicle)cl.getDeclaredConstructor().newInstance();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		
+		return vehicle;
+	}
+}

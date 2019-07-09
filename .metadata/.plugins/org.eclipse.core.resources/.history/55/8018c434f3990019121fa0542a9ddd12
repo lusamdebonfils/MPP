@@ -1,0 +1,22 @@
+package problem2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Building {
+	private List<Apartment> apartments;
+	private LandLord landLord;
+	private String name;
+	private double maintananceCost = 0;
+	private double profit = 0;
+	
+	public Building(String name, LandLord landLord) {
+		this.name = name;
+		this.landLord = landLord;
+		maintananceCost = 0;
+		profit = 0;
+		apartments = new ArrayList<>();
+	}
+	
+	
+}

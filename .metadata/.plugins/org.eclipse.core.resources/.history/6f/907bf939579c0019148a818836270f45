@@ -1,0 +1,14 @@
+package prob4.prob4.personbirthinfo.MainClass;
+
+import java.time.LocalDate;
+
+import prob4.prob4.personbirthinfo.Factory;
+import prob4.prob4.personbirthinfo.PersonInformation;
+
+public class Main {
+
+	public static void main(String[] args) {
+		PersonInformation t = Factory.createPersonInfo("Moses Niyonshuti", LocalDate.of(1980, 4, 22));
+		t.printPersonInformation();
+	}
+}

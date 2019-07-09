@@ -1,0 +1,14 @@
+package problem2.prob2C;
+
+import java.util.ArrayList;
+
+public class Student {
+	
+	public String name;
+	private ArrayList<Section> sections;
+	
+	public Student() {
+		sections = new ArrayList<>();
+	}
+	
+}

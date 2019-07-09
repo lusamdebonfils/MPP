@@ -1,0 +1,32 @@
+package problem2.prob2B;
+
+public class OrderLine {
+	
+	private Order order;
+	private String name;
+	private double price;
+	
+	public OrderLine(Order order) {
+		this.order = order;
+		this.name = null;
+	}
+
+	public Order getOrder() {
+		return order;
+	}
+
+	public void setOrder(Order order) {
+		this.order = order;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+	
+}

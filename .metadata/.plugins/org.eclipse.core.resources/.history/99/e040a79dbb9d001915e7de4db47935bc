@@ -1,0 +1,16 @@
+package business;
+import java.util.*;
+
+public interface ControllerInterface {
+	void addCheckOutRecord();
+	List<LibraryMember> getMembers();
+	List<Administrator> getAdmins();
+	List<Librarian> getLibrarians();
+	List<Book> getBooks();
+	boolean addBook(Book book);
+	boolean addBookCopy(BookCopy bookCopy);
+	boolean addLibMember(String firstName, String lastName, String phone, String memeberID);
+	boolean editLibMember(LibraryMember libMember);
+
+	
+}

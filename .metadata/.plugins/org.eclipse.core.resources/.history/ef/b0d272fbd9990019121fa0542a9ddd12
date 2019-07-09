@@ -1,0 +1,10 @@
+	1.
+	Asymmetry, the first call gave us a false because at runtime the 
+	equals on PersonWithJob object,p1 was called on the Person, 
+	p2 object which is not an instance of PersonWithJob but an instance of Person 
+	2.
+	The second call gave us a true because we called equals of p2 on p1 which are 
+	both instances of Person and only compares names.
+	
+	So to solve this we can use composition since their is no need for Polymorphism in this implementation
+	

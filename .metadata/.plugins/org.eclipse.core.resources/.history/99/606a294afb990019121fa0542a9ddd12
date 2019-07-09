@@ -1,0 +1,58 @@
+package problem2;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//LandLord1
+		LandLord landLord1 = new LandLord("Samuel Luswata");
+		//Building 140
+		Building b140 = new Building("Building 140", landLord1);
+		Apartment b140_001 = new Apartment("001",b140,1000);
+		Apartment b140_002 = new Apartment("002",b140,1000);
+		Apartment b140_003 = new Apartment("003",b140,1000);
+		Apartment b140_004 = new Apartment("004",b140,1000);
+		
+		//Building 141
+		Building b141 = new Building("Building 141", landLord1);
+		Apartment b141_001 = new Apartment("001",b141,2000);
+		Apartment b141_002 = new Apartment("002",b141,3000);
+		Apartment b141_003 = new Apartment("004",b141,2000);
+		Apartment b141_004 = new Apartment("005",b141,3000);
+		Apartment b141_005 = new Apartment("006",b141,2000);
+		Apartment b141_006 = new Apartment("007",b141,3000);
+		
+		//Building 142
+		Building b142 = new Building("Building 142", landLord1);
+		Apartment b142_001 = new Apartment("001",b142,2000);
+		Apartment b142_002 = new Apartment("002",b142,13000);
+		Apartment b142_003 = new Apartment("004",b142,12000);
+		Apartment b142_004 = new Apartment("005",b142,13000);
+		Apartment b142_005 = new Apartment("006",b142,12000);
+		Apartment b142_006 = new Apartment("007",b142,53000);
+		Apartment b142_007 = new Apartment("008",b142,13000);
+		Apartment b142_008 = new Apartment("009",b142,12000);
+		Apartment b142_009 = new Apartment("010",b142,83000);
+		
+		//Building 143
+		Building b143 = new Building("Building 143", landLord1);
+		Apartment b143_001 = new Apartment("001",b143,200);
+		
+		//Adding Maintenance costs to Buildings
+		b141.addMaintananceCost("Gardening", 800);
+		b141.addMaintananceCost("Yaka", 1500);
+		b141.addMaintananceCost("Umeme", 900);
+		
+		b142.addMaintananceCost("Gardening", 800);
+		b142.addMaintananceCost("Garbage", 1500);
+		b142.addMaintananceCost("Pool Cleaning", 900);
+		
+		
+		
+		landLord1.getTotalProfit();
+		
+		
+		
+
+	}
+
+}

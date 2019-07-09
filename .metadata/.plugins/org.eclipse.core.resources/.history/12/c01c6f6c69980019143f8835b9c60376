@@ -1,0 +1,21 @@
+package problem1;
+
+import java.time.LocalDate;
+
+public class ProjectManager {
+	
+	private String name;
+	private String id;
+	
+	private LocalDate getCurrentDate() {
+		return LocalDate.now();
+		
+	}
+	
+	public void getReport() {
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,24 @@
+package problem3B;
+
+public class Cylinder {
+	private double height = 1.0;
+	private Circle circle;
+	
+	public Cylinder() {
+		this.radius = getRadius();
+	}
+	public Cylinder(double radius) {
+		this();
+		this.radius = radius;
+	}
+	public Cylinder(double radius, double height) {
+		this(radius);
+		this.height = height;
+	}
+	public double getHeight() {
+		return height;
+	}
+	public double getVolume() {
+		return Math.PI * radius * radius * height;
+	}
+}

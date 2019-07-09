@@ -1,0 +1,34 @@
+package com.addis;
+
+public class FakeBitches {
+	private String name;
+	private int age;
+	private boolean canCook;
+	public FakeBitches(String name, int age, boolean canCook) {
+		this.name = name;
+		this.age = age;
+		this.canCook = canCook;
+	}
+	public FakeBitches() {
+		this("Bad Bitch", 20, false);
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public boolean isCanCook() {
+		return canCook;
+	}
+	public void setCanCook(boolean canCook) {
+		this.canCook = canCook;
+	}
+	
+}

@@ -1,0 +1,10 @@
+package problem1;
+
+public class ProjectManager {
+	
+	private String name;
+	private String id;
+	
+	
+
+}

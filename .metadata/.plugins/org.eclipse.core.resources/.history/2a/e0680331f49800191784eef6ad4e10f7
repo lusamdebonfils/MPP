@@ -1,0 +1,5 @@
+package problem2.prob2A;
+
+public class Student {
+	private String name;
+}

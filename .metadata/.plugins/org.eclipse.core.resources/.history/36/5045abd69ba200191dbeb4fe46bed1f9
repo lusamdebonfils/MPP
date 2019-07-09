@@ -1,0 +1,25 @@
+i) case when is a class
+--------------------------------------------------
+If the method stayed abstract or not implemented by both B and C then D would just override the method as required
+Then D would have to override the method() nomatter the implementation from interfaces B and C
+
+
+ii) case when is an interface. 
+---------------------------------------------------
+If the method() was not implemented in both B and C. The D would not require to do a thing 
+because it would still be abstract in D
+
+If the method() was implemented in both B and C as default 
+	@Override
+	default void method() {
+		System.out.println("B is da Issshhh!!!!");
+	}
+	
+	public interface C extends A {
+		@Override
+		default void method() {
+			System.out.println("C is da shit!!");
+		}
+	}
+
+	B.super.method();

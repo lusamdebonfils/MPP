@@ -1,0 +1,14 @@
+package prob2;
+
+public final class Ellipse {
+	private double semiMinorAxis;
+	private double semiMajorrAxis;
+	
+	public Ellipse(double a, double b) {
+		semiMinorAxis = a;
+		semiMajorrAxis = b;
+	}
+	
+	
+
+}

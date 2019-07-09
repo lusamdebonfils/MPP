@@ -1,0 +1,8 @@
+package prob2;
+
+public class EquilateralTriangle implements ClosedCurve, Polygon{
+	private double side;
+	
+	
+
+}

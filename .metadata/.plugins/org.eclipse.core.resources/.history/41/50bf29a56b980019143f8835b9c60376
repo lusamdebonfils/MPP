@@ -1,0 +1,13 @@
+package problem1;
+
+public class Developer {
+	
+	private String name;
+	private String id;
+	
+	public Developer() {
+		
+	}
+	
+	
+}

@@ -1,0 +1,68 @@
+package problem2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Building {
+	private List<Double> maintananceCosts;
+	private double totalCost;
+	private List<Apartment> apartments;
+	private LandLord landLord;
+	private String name;
+	private double profit;
+	private double totalRent;
+	
+	public Building(String name, LandLord landLord) {
+		this.name = name;
+		this.landLord = landLord;
+		maintananceCosts = new ArrayList<>();
+		profit = 0;
+		totalRent = 0;
+		totalCost = 0;
+		apartments = new ArrayList<>();
+	}
+
+	public List<Apartment> getApartments() {
+		return apartments;
+	}
+
+	public void setApartments(List<Apartment> apartments) {
+		this.apartments = apartments;
+	}
+
+	public LandLord getLandLord() {
+		return landLord;
+	}
+
+	public void setLandLord(LandLord landLord) {
+		this.landLord = landLord;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getMaintananceCost() {
+		maintananceCosts.forEach((e)->{
+			totalCost += e;
+		});
+		return totalCost;
+	}
+
+	public void setMaintananceCost(double anotherCost) {
+		this.maintananceCost = maintananceCost;
+	}
+
+	public double getProfit() {
+		apartments.forEach((e)->{
+			totalRent += e.getRent();
+		});
+		profit = totalRent - maintananceCost;
+		return profit;
+	}
+	
+}

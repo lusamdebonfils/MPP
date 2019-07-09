@@ -1,0 +1,15 @@
+package prob5_3.main;
+
+import problem5_3.Vehicle;
+import problem5_3.VehicleFactory;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Vehicle v1 = VehicleFactory.getVehicle("Bus");
+		Vehicle v2 = VehicleFactory.getVehicle("ElectricCar");
+		
+		v1.startEngine();
+		v2.startEngine();
+	}
+}

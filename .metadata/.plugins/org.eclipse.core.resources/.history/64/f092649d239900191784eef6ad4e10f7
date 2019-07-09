@@ -1,0 +1,27 @@
+package problem2.prob2B;
+
+import java.util.HashMap;
+
+public class OrderLine {
+	
+	private Order order;
+	private HashMap<String,Double> props;
+	
+	public OrderLine(Order order) {
+		this.order = order;
+		props = new HashMap<>();
+	}
+
+	public HashMap<String, Double> getProps() {
+		return props;
+	}
+
+	public void setProps(HashMap<String, Double> props) {
+		this.props = props;
+	}
+
+	
+	
+	
+	
+}

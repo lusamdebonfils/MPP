@@ -1,0 +1,4 @@
+	Asymmetry, the first call gave us a false because at runtime the 
+	equals on PersonWithJob object,p1 was called on the Person, 
+	p2 object which is not an instance of PersonWithJob but an instance of Person 
+	The second call gave us a true because 

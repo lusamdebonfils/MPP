@@ -1,0 +1,7 @@
+package dataaccess;
+
+import business.LibraryMember;
+
+public interface DataAccess {
+	
+}

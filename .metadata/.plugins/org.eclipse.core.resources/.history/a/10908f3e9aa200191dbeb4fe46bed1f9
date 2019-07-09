@@ -1,0 +1,14 @@
+package com.addis;
+
+public class Test implements D{
+
+	public Test() {
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

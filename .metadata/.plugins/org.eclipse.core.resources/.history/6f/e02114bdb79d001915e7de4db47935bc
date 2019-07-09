@@ -1,0 +1,114 @@
+package business;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Set;
+
+import dataaccess.DataAccessFacade;
+import exception.MemberExceptipn;
+import exception.UserException;
+
+public class SystemController implements ControllerInterface {
+	
+	
+	public UserType currentUserType;
+	DataAccessFacade db = new DataAccessFacade();
+	
+	public void login(String uid, String password) throws UserException {
+		//Do validation from here and compare with usersList from DB
+		if(uid == null || password == null || uid.isEmpty() || password.isEmpty()) {
+			throw new UserException("Password and Username cannot be empty");
+		}
+		
+		HashMap<String, User> usersList = db.getUsersFromDB();
+
+		if (!usersList.containsKey(uid)) {
+			throw new UserException("ID " + uid + " not found.");
+		}
+
+		String storedPassword = usersList.get(uid).getUserPassword();
+
+		if (!storedPassword.equals(password)) {
+			throw new UserException("Password incorrect.");
+		}
+		currentUserType = usersList.get(uid).getType();
+		//If user is admin show Admin section else show librarian section
+		
+	}
+	
+	
+
+	@Override
+	public void addCheckOutRecord() {
+		// TODO Auto-generated method stub
+		//To be done by Mr Kedi
+	}
+
+	@Override
+	public List<LibraryMember> getMembers() {
+		List<LibraryMember> members = (List<LibraryMember>) db.getMembersFromDB().values();
+		return members;
+	}
+
+	@Override
+	public List<Administrator> getAdmins() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Librarian> getLibrarians() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Book> getBooks() {
+		List<Book> books = (List<Book>) db.getBooksFromDB().values();
+		return books;
+	}
+
+	@Override
+	public boolean addLibMember(LibraryMember libMember) {
+		
+		if(db.getMembersFromDB().containsKey(libMember.getMemeberID())) {
+			return false;
+		}
+		//Read Through the List of Members
+		
+		return true;
+	}
+	public void savetoMemberList(List<LibraryMember> list) {
+		db.loadMembersMap(list);
+	}
+
+	@Override
+	public boolean editLibMember(LibraryMember libMember) {
+		if(getMembers().contains(libMember)) {
+			getMembers().add(libMember);
+			return true;
+		}
+		
+		return false;
+	}
+
+	@Override
+	public boolean addBook() {
+		
+		return false;
+	}
+
+	@Override
+	public boolean addBookCopy() {
+		
+		getBooks().forEach((book)->{
+			
+		});
+		return false;
+	}
+	
+	
+	
+	
+
+}

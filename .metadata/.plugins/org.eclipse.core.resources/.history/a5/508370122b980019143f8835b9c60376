@@ -1,0 +1,10 @@
+package com.addis;
+
+public class FakeBitches {
+	private String name;
+	private int age;
+	private boolean canCook;
+	public FakeBitches(String name, int age, boolean canCook) {
+		
+	}
+}

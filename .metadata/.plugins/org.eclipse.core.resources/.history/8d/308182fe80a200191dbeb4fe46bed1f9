@@ -1,0 +1,10 @@
+package prob2;
+
+public interface Polygon {
+	double[] getSides();
+	default double computeAveragePerimeter() {
+		double avg = 0;
+		return 0;
+		
+	}
+}

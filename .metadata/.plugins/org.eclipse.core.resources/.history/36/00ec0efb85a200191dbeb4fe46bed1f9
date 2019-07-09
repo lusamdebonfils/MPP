@@ -1,0 +1,12 @@
+package prob2;
+
+public interface Polygon {
+	 double[] getSides(); 
+	 default double getPerimeter() {
+		double sum = 0;
+		double[] sides = getPerimeter();
+		
+		return 0;
+		 
+	 }
+}

@@ -1,0 +1,19 @@
+package problem1;
+
+import java.util.List;
+
+public class Project {
+	private boolean isCompleted;
+	private int projectId;
+	private String projectName;
+	private List<Feature> backLog;
+	private List<Release> releases;
+	private ProjectManager manager;
+	
+	
+	
+	
+	
+
+	
+}

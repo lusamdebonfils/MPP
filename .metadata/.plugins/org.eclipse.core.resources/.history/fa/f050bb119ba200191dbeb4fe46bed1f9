@@ -1,0 +1,9 @@
+i) case when is a class
+--------------------------------------------------
+Then D would have to override the method() nomatter the implementation from interfaces B and C
+
+
+ii) case when is an interface. 
+---------------------------------------------------
+If the method() was not implemented in both B and C. The D would not require to do a thing 
+because it would still be abstract in D

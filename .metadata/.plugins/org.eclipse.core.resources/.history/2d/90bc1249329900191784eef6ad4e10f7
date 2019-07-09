@@ -1,0 +1,25 @@
+package problem2.prob2C;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Student student1 = new Student("Samuel Luswata");
+		student1.addSection(100);
+		student1.addSection(200);
+		student1.addSection(300);
+		Student student2 = new Student("Moses Niyoshuti");
+		student2.addSection(100);
+		student2.addSection(222);
+		student2.addSection(203);
+		student1.addSection(900);
+	
+		Section newSection = new Section(500);
+		student1.addSection(newSection.sectionNum);
+		student2.addSection(newSection.sectionNum);
+				
+		
+	}
+	
+
+}

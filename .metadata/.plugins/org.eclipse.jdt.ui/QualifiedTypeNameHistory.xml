@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="problem2.Apartment"/>
+<fullyQualifiedTypeName name="problem2.Building"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="problem5_3.personbirthinfo.PersonInformation"/>
+<fullyQualifiedTypeName name="problem5_3.personbirthinfo.Factory"/>
+</qualifiedTypeNameHistroy>

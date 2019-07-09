@@ -1,0 +1,85 @@
+i) case when is a class
+--------------------------------------------------
+If the method stayed abstract or not implemented by both B and C then D would just override the method as required
+Then D would have to override the method() nomatter the implementation from interfaces B and C
+	public interface B extends A {
+		
+	}
+
+	public interface C extends A {
+
+	}
+	
+If there was a default implementation in either B or C then D wouldnot have to implement the method unless required
+	public interface B extends A {
+		
+	}
+
+	public interface C extends A {
+		@Override
+		default void method() {
+			System.out.println("C is da THing!!");
+		}
+	}
+	
+If both B and C implemented their own implementation of the method then D would have to implement its own implementation
+	public interface B extends A {
+		@Override
+		default void method() {
+			System.out.println("C is da THing!!");
+			
+		}
+	}
+
+	public interface C extends A {
+		@Override
+		default void method() {
+			System.out.println("C is da THing!!");
+		}
+	}
+
+
+ii) case when is an interface. 
+---------------------------------------------------
+If the method() was not implemented in both B and C. The D would not require to do a thing 
+because it would still be abstract in D
+	public interface B extends A {
+	
+	}
+
+	public interface C extends A {
+
+	}
+
+
+If the method() was implemented as default in either B or C. The D would not require to do a thing 
+because it would still have a default implementation 
+	public interface B extends A {
+		@Override
+		default void method() {
+			System.out.println("C is da THing!!");
+			
+		}
+	}
+
+	public interface C extends A {
+		
+	}
+
+If the method() was implemented in both B and C as default then we would have to do our 
+own implemented of either default methods or even do our own implementation ie B.super.method() or C.super.method();
+	public interface B extends A {
+		@Override
+		default void method() {
+			System.out.println("C is da THing!!");
+			
+		}
+	}
+
+	public interface C extends A {
+		@Override
+		default void method() {
+			System.out.println("C is da THing!!");
+		}
+	}
+

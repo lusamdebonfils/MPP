@@ -1,0 +1,35 @@
+package problem1;
+
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
+
+public class ProjectManager {
+	
+	private String name;
+	private String id;
+	private Map<Developer, Integer> progressTracker;
+	
+	public ProjectManager(String id, String name) {
+		this.id = id;
+		this.name = name;
+		progressTracker = new HashMap<>();
+	}
+	
+	private LocalDate getCurrentDate() {
+		return LocalDate.now();
+		
+	}
+	
+	public void getProgressReport() {
+		progressTracker.forEach(
+				(k,v)->{
+					//print each report for Developer on a particular date;
+				});
+	}
+	
+//	private getReport() {
+//		
+//	}
+
+}
